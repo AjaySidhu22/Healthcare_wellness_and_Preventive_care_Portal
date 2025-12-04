@@ -1,7 +1,5 @@
  # 🏥 HCLTech Healthcare Wellness & Preventive Care Portal
 
- # 🏥 HCLTech Healthcare Wellness & Preventive Care Portal
-
 ## ✨ Project Overview
 
 This project is a *Minimum Viable Product (MVP)* for a *Healthcare Wellness and Preventive Care Portal, developed as part of the HCLTech Supercharging Hackathon. It aims to seamlessly integrate front-end and back-end technologies to focus on **wellness* and *preventive care*, helping patients achieve basic health goals and maintain compliance with essential checkups.
@@ -104,11 +102,4 @@ The following core functionalities are delivered to constitute the Minimum Viabl
 * Deployed frontend and backend applications.
 * Functional CI/CD pipeline (GitHub Actions) with basic automated tests.
 
----
-
-## 🚀 Next Steps
-
-* Complete the *Appointment Booking* logic (doctor availability and slot selection).
-* Implement the News API and Health Tip API integrations.
-* Enhance UI/UX based on the provided mock designs.
-* Integrate a data visualization library to display patient progress trends.
+ 
