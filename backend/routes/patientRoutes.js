@@ -72,16 +72,19 @@ router.post("/update-goals", auth, patientOnly, async (req, res) => {
 
     if (!patient) return res.status(404).json({ msg: "Patient not found" });
 
-    patient.patientProfile.goals = {
-      steps,
-      calories,
-      sleep,
-      hydration,
-    };
+    // Update progress only
+    if (steps !== undefined) patient.patientProfile.goals.steps.progress = steps;
+    if (calories !== undefined) patient.patientProfile.goals.calories.progress = calories;
+    if (sleep !== undefined) patient.patientProfile.goals.sleep.progress = sleep;
+    if (hydration !== undefined) patient.patientProfile.goals.hydration.progress = hydration;
 
     await patient.save();
 
-    res.json({ msg: "Goals updated successfully", goals: patient.patientProfile.goals });
+    res.json({
+      msg: "Progress updated successfully",
+      goals: patient.patientProfile.goals
+    });
+
   } catch (err) {
     console.log(err);
     res.status(500).json({ msg: "Server error" });
